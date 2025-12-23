@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dijital Eğitim Koçu</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-shapes">
+        <div class="shape shape-1"></div>
+        <div class="shape shape-2"></div>
+    </div>
+
+    <div class="container">
+        <header>
+            <h1>Study Coach <span class="highlight">Genie</span></h1>
+            <p>Sınav, süre ve moduna göre sana özel planı hemen oluştur.</p>
+        </header>
+
+        <main>
+            <section class="glass-card form-section" id="input-section">
+                <form id="study-form">
+                    <div class="form-group">
+                        <label for="exam">Hangi Sınav?</label>
+                        <select id="exam" required>
+                            <option value="" disabled selected>Seçiniz</option>
+                            <option value="YKS">YKS (TYT/AYT)</option>
+                            <option value="LGS">LGS</option>
+                            <option value="KPSS">KPSS</option>
+                            <option value="ALES">ALES</option>
+                            <option value="Genel">Genel Çalışma</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="duration">Süre (Saat)</label>
+                        <input type="number" id="duration" min="1" max="10" value="2" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Ruh Halin Nasıl?</label>
+                        <div class="mood-options">
+                            <input type="radio" name="mood" id="mood-energetic" value="Enerjik">
+                            <label for="mood-energetic" class="mood-label">🔥 Enerjik</label>
+
+                            <input type="radio" name="mood" id="mood-normal" value="Normal" checked>
+                            <label for="mood-normal" class="mood-label">🙂 Normal</label>
+
+                            <input type="radio" name="mood" id="mood-tired" value="Yorgun">
+                            <label for="mood-tired" class="mood-label">😴 Yorgun</label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="cta-button">Planı Oluştur ✨</button>
+                </form>
+            </section>
+
+            <section class="glass-card result-section hidden" id="result-section">
+                <div class="quote-box">
+                    <p id="quote-text">"Harika işler zaman alır."</p>
+                </div>
+                
+                <div class="plan-timeline" id="plan-container">
+                    <!-- Javascript ile doldurulacak -->
+                </div>
+
+                <button id="reset-button" class="secondary-button">Yeni Plan Yap</button>
+            </section>
+        </main>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
