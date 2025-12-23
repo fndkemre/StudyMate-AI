@@ -1,2 +1,3 @@
 # StudyMate-AI
-PanicStudentAI, sınav öncesinde panik yapan ve zamanı verimli kullanmakta zorlanan öğrenciler için geliştirilmiş, yapay zeka destekli bir çalışma planı asistanıdır. Kullanıcının süresine, konusuna ve ruh haline göre kişiselleştirilmiş, sade ve motive edici çalışma planları üretir.
+PanicStudentAI, sınav öncesi stres yaşayan öğrencilerin kısa sürede odaklanmasını ve etkili çalışmasını sağlamak amacıyla geliştirilmiş basit bir yapay zeka uygulamasıdır.
+Kullanıcıdan alınan temel bilgiler doğrultusunda, anlaşılır ve motive edici bir çalışma planı oluşturarak panik yerine kontrol hissi kazandırmayı hedefler.
